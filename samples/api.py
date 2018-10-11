@@ -8,7 +8,7 @@ cluster = Cluster(['172.17.0.2'])
 #creation de la session
 session = cluster.connect()
 
-KEYSPACE = "test-technique"
+KEYSPACE = "testtechnique"
 #ajout du keyspace à la session
 session.set_keyspace(KEYSPACE)
 
