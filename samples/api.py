@@ -9,6 +9,7 @@ cluster = Cluster(['172.17.0.2'])
 session = cluster.connect()
 
 KEYSPACE = "test-technique"
+#ajout du keyspace à la session
 session.set_keyspace(KEYSPACE)
 
 app = Flask(__name__)
