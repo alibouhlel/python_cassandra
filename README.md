@@ -18,4 +18,5 @@ $ docker run -it --link nom_du_cluster:cassandra --rm cassandra sh -c 'exec cqls
 * J'ai créé la table Indicateurs avec les champs Sexe, Nombre et moyenAge
 * J'ai eu des problèmes pour manipuler les dates et calculer l’âge étant donné que j'ai la date de naissance, donc normalement je dois faire la différence entre la date d'aujourd'hui et la date de naissance et ensuite calculer la moyenne avec la fonction prédéfinie AVG. 
 ## Partie 4: Développement d'une api permettant d’exposer les indicateurs
-* pour retourner du json, j'ai ajouter le paramétre json dans la requête CQL et par suite le retour de cette requête est converti directement en json
+* pour retourner du json, j'ai ajouter le paramétre json dans la requête CQL et par suite le retour de cette requête est convertie directement en json
+* Pour re-exécuter l'application il faut soit changer le keyspace ou bien le supprimer en utilisant la requête CQL suivante DROP KEYSPACE keyspace
