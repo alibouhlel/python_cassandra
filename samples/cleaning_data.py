@@ -4,12 +4,11 @@ dataFrame = pd.read_csv('clients.txt', sep="|", header=None)
 dataFrame.columns = ["Nom", "Adresse", "Sexe", "Email", "Date_naissance"]
 
 
-
 #filter les noms: un nom ne doit pas contenir des chiffres
 nomFilter=dataFrame['Nom'].str.contains('^([^0-9]*)$', regex=True, na=False)
 
-#filtrer les dates selon le format yyyy-mm-dd
-# et tenir compte des cas particulier par exemple 30 Fevrier
+#filtrer les dates selon le format aaaa-mm-jj
+# et tenir compte des cas particuliers par exemple un 30 Fevrier
 dateNaissanceFilter = dataFrame['Date_naissance'].str.contains('(((19|20)([2468][048]|[13579][26]|'
                                                           '0[48])|2000)[/-]02[/-]29|((19|20)'
                                                           '[0-9]{2}[/-](0[4678]|1[02])[/-]'
@@ -23,7 +22,7 @@ dateNaissanceFilter = dataFrame['Date_naissance'].str.contains('(((19|20)([2468]
 sexeFilter = dataFrame['Sexe'].str.contains('H|F', regex=True, na=False)
 
 #filtrer si le champ email respecte le format hash sha256:
-# longueur 64 avec soit des miniscules ou bien des majuscules
+# longueur 64 avec soit des lettres en miniscules ou bien en majuscules
 emailFilter=dataFrame['Email'].str.contains('([a-z\d]{64}|[A-Z\d]{64})', regex=True, na=False)
 
 #filtrage du data frame
