@@ -18,7 +18,7 @@ dateNaissanceFilter = dataFrame['Date_naissance'].str.contains('(((19|20)([2468]
                                                           '[0-9]{2}[/-]02[/-](0[1-9]|1[0-9]'
                                                           '|2[0-8])))', regex=True, na=False)
 
-#filtrer le sexe: H ou F
+#filtrage du sexe: H ou F
 sexeFilter = dataFrame['Sexe'].str.contains('H|F', regex=True, na=False)
 
 #filtrer si le champ email respecte le format hash sha256:
