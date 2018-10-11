@@ -1,5 +1,5 @@
 # test_technique_python_cassandra
-* Tout d'abord il faut installer les dépendances nécessaires pour l'application. Tout est indiqué dans le fichier requirements.txt
+* Tout d'abord il faut installer les dépendances nécessaires pour l'application. Tout est indiqué dans le fichier requirements.txt et mettre le fichier clients.txt sous le repertoire samples
 ## Partie 1 : Filtrage du contenu non valide du fichier clients.txt
 * Le filtrage a été effectué sur les champs Nom, Sexe, Email et Date de naissance
 * un nom est impérativement composé de lettres alphabétiques 
