@@ -5,10 +5,10 @@ from cassandra.cluster import Cluster
 
 #adresse ip du cluster qui dans mon cas celle du docker
 cluster = Cluster(['172.17.0.2'])
-"creation de la session"
+#creation de la session
 session = cluster.connect()
 
-KEYSPACE = "test21"
+KEYSPACE = "test-technique"
 session.set_keyspace(KEYSPACE)
 
 app = Flask(__name__)
