@@ -1,5 +1,5 @@
 # test_technique_python_cassandra
-* Tout d'abord il faut installer les dépendances nécessaires pour l'application : pip install -r requirements.txt
+* Tout d'abord il faut installer les dépendances nécessaires pour l'application. Tout est indiqué dans le fichier requirements.txt
 ## Partie 1 : Filtrage du contenu non valide du fichier clients.txt
 * Le filtrage a été effectué sur les champs Nom, Sexe, Email et Date de naissance
 * un nom est impérativement composé de lettres alphabétiques 
@@ -14,7 +14,7 @@ $ docker pull cassandra
 $ docker run --name nom_du_cluster -d cassandra:latest
 $ docker run -it --link nom_du_cluster:cassandra --rm cassandra sh -c 'exec cqlsh "$CASSANDRA_PORT_9042_TCP_ADDR"'
 ```
-## Partie 3 : Calcul des indicateurs : 
+## Partie 3 : Calcul des indicateurs 
 * J'ai créé la table Indicateurs avec les champs Sexe, Nombre et moyenAge
 * J'ai eu des problèmes pour manipuler les dates et calculer l’âge étant donné que j'ai la date de naissance, donc normalement je dois faire la différence entre la date d'aujourd'hui et la date de naissance et ensuite calculer la moyenne avec la fonction prédéfinie AVG. 
 ## Partie 4: Développement d'une api permettant d’exposer les indicateurs
