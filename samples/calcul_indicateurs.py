@@ -5,7 +5,7 @@ cluster = Cluster(['172.17.0.2'])
 #creation de la session
 session = cluster.connect()
 
-KEYSPACE = "test-technique"
+KEYSPACE = "testtechnique"
 session.set_keyspace(KEYSPACE)
 
 #creation de la table Indicateurs
