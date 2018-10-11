@@ -2,7 +2,7 @@ from cassandra.cluster import Cluster
 import pandas as pd
 
 #declaration du keyspace
-KEYSPACE = "test-technique"
+KEYSPACE = "testtechnique"
 
 #adresse ip du cluster qui dans mon cas celle du docker
 cluster = Cluster(['172.17.0.2'])
