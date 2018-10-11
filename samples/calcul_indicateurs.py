@@ -2,7 +2,7 @@ from cassandra.cluster import Cluster
 
 #adresse ip du cluster qui dans mon cas celle du docker
 cluster = Cluster(['172.17.0.2'])
-"creation de la session"
+#creation de la session
 session = cluster.connect()
 
 KEYSPACE = "test-technique"
@@ -44,6 +44,3 @@ session.execute(prepared, ('H',nombreHommes[0],ageMoyenHommes[0]))
 rows = session.execute('SELECT Sexe, Nombre, AgeMoyen  FROM Indicateurs')
 for row in rows:
     print (row)
-
-
-
